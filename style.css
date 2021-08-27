@@ -17,5 +17,47 @@ body {
     border-radius: 50%;
     border-top: 10px solid #2ecc71;
     position: relative;
+    animation: a1 2s linear infinite;
+}
 
+/* Create the main arch */
+.loading::before,
+.loading::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: -10;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+/* Create one of the arches */
+.loading::before {
+    border-top: 10px solid #e74c3c;
+    transform: rotate(120deg);
+}
+
+/* Create one of the arches */
+.loading::after {
+    border-top: 10px solid #eafc45;
+    transform: rotate(240deg);
+}
+
+/* this is to style the word 'Loading...' */
+.loading span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    font-weight: 500;
+    color: #ffe9cf;
+    text-align: center;
+    line-height: 200px;
+}
+
+@keyframes a1 {
+    to{
+        transform: rotate(360deg)
+    }
 }
