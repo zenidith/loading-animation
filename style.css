@@ -54,10 +54,20 @@ body {
     color: #ffe9cf;
     text-align: center;
     line-height: 200px;
+    /* to stop the text spinning */
+    animation: a2 2s linear infinite;
 }
 
+/* for the 3 arches */
 @keyframes a1 {
     to{
         transform: rotate(360deg)
+    }
+}
+
+/* for the text */
+@keyframes a2 {
+    to{
+        transform: rotate(-360deg)
     }
 }
